@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* styles/globals.css */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0.3)
+    );
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-position: 0%;
+    background-color: #6174ce; /* Azul */
+  }
+  20% {
+    background-position: 100%;
+    background-color: #5374ce; /* Azul más claro */
+  }
+  40% {
+    background-position: 100%;
+    background-color: #cf4f63; /* Rojo */
+  }
+  60% {
+    background-position: 0%;
+    background-color: #cf4f63; /* Rojo */
+  }
+  80% {
+    background-position: 0%;
+    background-color: #5374ce; /* Azul más claro */
+  }
+  100% {
+    background-position: 0%;
+    background-color: #6174ce; /* Azul */
+  }
+}
+
+.element-to-rotate {
+  background: linear-gradient(90deg, #6174ce, #cf4f63);
+  background-size: 200% 100%;
+  animation: colorChange 6s linear infinite;
+}
+
+.gradient-text {
+  background-color: linear-gradient(
+    360deg,
+    #ff0000,
+    #0000ff
+  ); /* Gradiente de rojo a azul */
+  -webkit-background-clip: text; /* Aplicar el fondo solo al texto */
+  background-clip: text;
+  animation: colorChange 8s linear infinite; /* Animación de cambio de color */
+}
+
+/*RONALD*/
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .btn-blue {
+    @apply text-white font-bold px-4 py-2 rounded bg-blue-600 hover:bg-blue-500;
+  }
+}
+
+@layer components {
+  .animate-gradient {
+    background-size: 300%;
+    animation: animate-gradient 5s ease infinite alternate;
+  }
+
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+}
+/*  jhosy*/
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .btn-blue {
+    @apply text-white font-bold px-4 py-2 rounded bg-blue-600 hover:bg-blue-500;
+  }
+}
+
+/* styles.css */
+.float-animation {
+  animation-name: floatAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+

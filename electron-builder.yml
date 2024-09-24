@@ -1,0 +1,12 @@
+appId: com.nextron.ecomas
+productName: Sistema de Emisión de Certificados
+copyright: Copyright © 2024 Consorcio Ecomas
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
